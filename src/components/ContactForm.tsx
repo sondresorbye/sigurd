@@ -18,7 +18,6 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `Navn: ${data.get("name")}\n` +
         `Telefon: ${data.get("phone")}\n` +
-        `E-post: ${data.get("email")}\n` +
         `Type prosjekt: ${data.get("project_type")}\n` +
         `Adresse: ${data.get("address")}\n\n` +
         `Melding:\n${data.get("message")}`
@@ -84,23 +83,6 @@ export default function ContactForm() {
             placeholder="123 45 678"
           />
         </div>
-      </div>
-
-      <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700 mb-1"
-        >
-          Din e-post *
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-colors"
-          placeholder="din@epost.no"
-        />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
