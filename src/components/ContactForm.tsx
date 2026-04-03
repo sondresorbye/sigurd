@@ -10,7 +10,11 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const subject = encodeURIComponent("Henvendelse fra bermanblikk.no");
+    const projectType = (data.get("project_type") as string) || "";
+    const projectLabel = projectType
+      ? form.querySelector<HTMLSelectElement>("#project_type")?.selectedOptions[0]?.text || projectType
+      : "Generell";
+    const subject = encodeURIComponent(`Henvendelse vedrørende ${projectLabel}`);
     const body = encodeURIComponent(
       `Navn: ${data.get("name")}\n` +
         `Telefon: ${data.get("phone")}\n` +
