@@ -1,65 +1,225 @@
+import Link from "next/link";
 import Image from "next/image";
+
+interface Service {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const services: Service[] = [
+  {
+    title: "Takstein / Skiferstein",
+    description:
+      "Legging og reparasjon av takstein og skiferstein på alle typer bygg.",
+    image: "https://images.unsplash.com/photo-1767544050173-e0101f579932?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Takplater / Båndtekking",
+    description:
+      "Montering av takplater og båndtekking for nye og eksisterende tak.",
+    image: "https://images.unsplash.com/photo-1711666576531-b39c29414e12?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Beslagsarbeider og produksjon",
+    description:
+      "Skreddersydde beslag, produksjon og montering etter dine behov.",
+    image: "https://images.unsplash.com/photo-1763665814485-a0a1b6f51ed7?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Ventilasjon montering",
+    description:
+      "Enkel ventilasjon montering og prosjektering for boliger og næring.",
+    image: "https://images.pexels.com/photos/8297856/pexels-photo-8297856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  },
+  {
+    title: "Ventilasjonsisolering",
+    description: "Isolering av ventilasjonsanlegg for bedre energieffektivitet.",
+    image: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Takrenner og nedløpsrør",
+    description:
+      "Montering, reparasjon og vedlikehold av takrenner og nedløpsrør.",
+    image: "https://images.unsplash.com/photo-1770277662704-8fc096960eb2?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Luftehatter / Pipebeslag",
+    description:
+      "Montering og utskifting av luftehatter og pipebeslag for god tetting.",
+    image: "https://images.unsplash.com/photo-1683041717386-91a33191da42?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Snøfangere",
+    description:
+      "Montering av snøfangere for å sikre taket gjennom vinteren.",
+    image: "https://images.unsplash.com/photo-1517299321609-52687d1bc55a?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Takreparasjoner og service",
+    description:
+      "Alle typer takreparasjoner og løpende serviceoppdrag.",
+    image: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Lekkasjesøking / Tetting",
+    description:
+      "Effektiv lekkasjesøking og tetting for å beskytte bygget ditt.",
+    image: "https://images.unsplash.com/photo-1760331840361-d751cfc1becf?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Årlig ettersyn og tilstandsrapporter",
+    description:
+      "Regelmessig kontroll og dokumenterte tilstandsrapporter.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Gratis vurdering",
+    description:
+      "Vi tar ingen ting for å komme med forslag til løsninger — få en annenparts mening.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <section className="bg-brand-blue text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+              Vi tar et{" "}
+              <span className="text-brand-red">tak</span> for deg!
+            </h1>
+            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
+              Et enkeltpersonforetak med svennebrev innen ventilasjon og
+              blikkenslager. Vi utfører alle typer tak- og blikkenslagerarbeid i
+              hele Oslo og omegn.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center justify-center bg-brand-red hover:bg-brand-red-dark text-white px-8 py-3.5 rounded-md text-base font-semibold transition-colors"
+              >
+                Kontakt oss
+              </Link>
+              <Link
+                href="/galleri"
+                className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white px-8 py-3.5 rounded-md text-base font-semibold transition-colors border border-white/20"
+              >
+                Se våre referanser
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-brand-blue/10">
+              <Image
+                src="/images/sigurd-cropped.png"
+                alt="Sigurd Aamlid"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 224px, 256px"
+                priority
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                Tjenester i hele Oslo og omegn
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+                Vi utfører lekkasjesøking og tetting, årlig ettersyn og
+                tilstandsrapporter, og tar ingen ting for å komme med forslag til
+                løsninger. Få en annenparts mening helt gratis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">
+            Våre tjenester
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 group"
+              >
+                <div className="relative h-44 overflow-hidden bg-gray-200">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional services */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-brand-blue rounded-xl p-8 sm:p-12 text-white">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                Også andre fysiske oppdrag
+              </h2>
+              <p className="text-white/80 text-lg leading-relaxed mb-6">
+                Vi tar også på oss andre fysiske arbeidsoppgaver — for eksempel
+                bortkjøring, enkel maling, med mer. Ta kontakt for å høre hva vi
+                kan hjelpe deg med!
+              </p>
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center justify-center bg-brand-red hover:bg-brand-red-dark text-white px-8 py-3.5 rounded-md text-base font-semibold transition-colors"
+              >
+                Ta kontakt for en uforpliktende samtale
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gray-50 py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            Klar for å komme i gang?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Ta kontakt med oss for befaring, eller send oss dine tegninger for
+            beregning av pris og løsninger.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center justify-center bg-brand-red hover:bg-brand-red-dark text-white px-8 py-3.5 rounded-md text-lg font-semibold transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Kontakt oss i dag
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
