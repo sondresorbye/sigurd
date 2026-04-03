@@ -76,7 +76,7 @@ const services: Service[] = [
   {
     title: "Gratis vurdering",
     description:
-      "Vi tar ingen ting for å komme med forslag til løsninger — få en annenparts mening.",
+      "Vi tar ingen ting for å komme med forslag til løsninger. Få en annenparts mening.",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
   },
 ];
@@ -93,9 +93,9 @@ export default function Home() {
               <span className="text-brand-red">tak</span> for deg!
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
-              Et enkeltpersonforetak med svennebrev innen ventilasjon og
-              blikkenslager. Vi utfører alle typer tak- og blikkenslagerarbeid i
-              hele Oslo og omegn.
+              Enkeltpersonforetak med svennebrev innen ventilasjon og
+              blikkenslager. Over 5 års erfaring i bransjen. Vi utfører alle
+              typer tak- og blikkenslagerarbeid i hele Oslo og omegn.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -117,28 +117,72 @@ export default function Home() {
 
       {/* Intro */}
       <section className="bg-white py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Tjenester i hele Oslo og omegn
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            Vi utfører lekkasjesøking og tetting, årlig ettersyn og
+            tilstandsrapporter, og tar ingen ting for å komme med forslag til
+            løsninger. Få en annenparts mening helt gratis.
+          </p>
+        </div>
+      </section>
+
+      {/* Om Sigurd */}
+      <section className="bg-gray-50 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-brand-blue/10">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-lg border-4 border-brand-blue/10">
               <Image
                 src="/images/sigurd-cropped.png"
                 alt="Sigurd Aamlid"
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 768px) 224px, 256px"
+                sizes="(max-width: 768px) 192px, 224px"
                 priority
               />
             </div>
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Tjenester i hele Oslo og omegn
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-                Vi utfører lekkasjesøking og tetting, årlig ettersyn og
-                tilstandsrapporter, og tar ingen ting for å komme med forslag til
-                løsninger. Få en annenparts mening helt gratis.
-              </p>
-            </div>
+            <p className="text-sm font-semibold text-brand-red uppercase tracking-wide mb-2">
+              Daglig leder
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+              Sigurd Aamlid
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              Med svennebrev innen ventilasjon og blikkenslager og over{" "}
+              <strong className="text-gray-900">5 års erfaring</strong> fra to
+              anerkjente aktører i bransjen, har Sigurd vært involvert i alt fra
+              mindre reparasjoner til store prosjekter for borettslag og
+              næringseiendom, til sammen godt over{" "}
+              <strong className="text-gray-900">150 oppdrag</strong>.
+            </p>
+            <p className="mt-3 text-lg text-gray-600 leading-relaxed">
+              Med Berman Blikk får du direkte kontakt med fagpersonen som
+              utfører jobben, rask befaring og tett oppfølging fra start til
+              slutt.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
+            {[
+              { value: "5+", label: "Års erfaring" },
+              { value: "150+", label: "Oppdrag utført" },
+              { value: "100%", label: "Personlig oppfølging" },
+              { value: "Oslo", label: "Og hele omegn" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-white rounded-xl p-6 sm:p-8 text-center shadow-sm border border-gray-100"
+              >
+                <p className="text-3xl sm:text-4xl font-extrabold text-brand-blue">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-sm sm:text-base text-gray-600 font-medium">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -187,7 +231,7 @@ export default function Home() {
                 Også andre fysiske oppdrag
               </h2>
               <p className="text-white/80 text-lg leading-relaxed mb-6">
-                Vi tar også på oss andre fysiske arbeidsoppgaver — for eksempel
+                Vi tar også på oss andre fysiske arbeidsoppgaver, for eksempel
                 bortkjøring, enkel maling, med mer. Ta kontakt for å høre hva vi
                 kan hjelpe deg med!
               </p>

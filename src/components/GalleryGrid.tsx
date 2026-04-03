@@ -13,7 +13,7 @@ const galleryImages: GalleryImage[] = [
   {
     src: "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&h=600&fit=crop",
     alt: "Taktekking prosjekt",
-    caption: "Omlegging av takstein — enebolig i Oslo",
+    caption: "Omlegging av takstein, enebolig i Oslo",
   },
   {
     src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
@@ -33,7 +33,7 @@ const galleryImages: GalleryImage[] = [
   {
     src: "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=800&h=600&fit=crop",
     alt: "Skiferstein tak",
-    caption: "Skiferstein — villa på Nordstrand",
+    caption: "Skiferstein, villa på Nordstrand",
   },
   {
     src: "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?w=800&h=600&fit=crop",

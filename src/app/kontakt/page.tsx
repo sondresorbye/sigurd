@@ -50,7 +50,7 @@ export default function KontaktPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Innehaver</p>
+                    <p className="text-sm text-gray-500">Daglig leder</p>
                     <p className="font-medium text-gray-900">Sigurd Aamlid</p>
                   </div>
                 </div>

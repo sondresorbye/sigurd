@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Berman Blikk | Blikkenslager og taktekker i Oslo",
   description:
-    "Enkeltpersonforetak med svennebrev innen ventilasjon og blikkenslager. Takstein, takplater, beslag, ventilasjon og mer. Tjenester i hele Oslo og omegn.",
+    "Enkeltpersonforetak med svennebrev innen ventilasjon og blikkenslager. Over 5 års erfaring i bransjen. Takstein, takplater, beslag, ventilasjon og mer i Oslo og omegn.",
 };
 
 export default function RootLayout({
