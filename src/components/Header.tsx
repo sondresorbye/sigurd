@@ -94,6 +94,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/kontakt"
+              onClick={() => setMenuOpen(false)}
+              className="block mt-2 text-center bg-brand-red hover:bg-brand-red-dark text-white px-4 py-3 rounded-md text-base font-semibold transition-colors"
+            >
+              Kontakt oss
+            </Link>
           </div>
         </div>
       )}
