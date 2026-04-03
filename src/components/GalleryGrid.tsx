@@ -47,12 +47,12 @@ export default function GalleryGrid() {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {galleryImages.map((image, index) => (
           <button
             key={index}
             onClick={() => setSelectedImage(image)}
-            className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200 cursor-pointer text-left"
+            className="group relative aspect-[4/3] overflow-hidden bg-stone cursor-pointer text-left border border-stone-dark hover:border-copper/40 transition-all duration-150 hover:-translate-y-1 hover:shadow-hard"
           >
             <Image
               src={image.src}
@@ -61,23 +61,26 @@ export default function GalleryGrid() {
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            {/* Caption bar slides up on hover */}
+            <div className="absolute bottom-0 left-0 right-0 bg-slate-deep/90 px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-200">
               <p className="text-white text-sm font-medium">{image.caption}</p>
             </div>
+            {/* Corner accent */}
+            <div className="absolute top-3 right-3 w-2 h-2 border border-copper/0 group-hover:border-copper rotate-45 transition-colors duration-200" />
           </button>
         ))}
       </div>
 
+      {/* Lightbox */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-slate-deep/95 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-4xl w-full max-h-[90vh]">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              className="absolute -top-12 right-0 text-white/50 hover:text-copper transition-colors duration-150"
               aria-label="Lukk"
             >
               <svg
@@ -87,14 +90,14 @@ export default function GalleryGrid() {
                 viewBox="0 0 24 24"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+                  strokeLinecap="square"
+                  strokeLinejoin="miter"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden border border-white/10">
               <Image
                 src={selectedImage.src}
                 alt={selectedImage.alt}
@@ -103,7 +106,7 @@ export default function GalleryGrid() {
                 sizes="100vw"
               />
             </div>
-            <p className="text-white text-center mt-4 text-lg">
+            <p className="text-white text-center mt-4 text-lg font-display">
               {selectedImage.caption}
             </p>
           </div>

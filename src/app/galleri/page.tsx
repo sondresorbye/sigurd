@@ -10,23 +10,27 @@ export const metadata: Metadata = {
 export default function GalleriPage() {
   return (
     <>
-      <section className="bg-brand-blue text-white py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+      <section className="bg-slate-deep text-white section-divider-down">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <p className="font-mono text-xs font-bold uppercase tracking-widest text-copper mb-3">
+            Referanser
+          </p>
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
             Galleri
           </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">
+          <div className="w-12 h-px bg-copper mt-4 mb-4" />
+          <p className="text-lg text-white/60 max-w-2xl">
             Her er et utvalg av jobber vi har utført. Ta gjerne kontakt for
             referanser eller mer informasjon om våre prosjekter.
           </p>
         </div>
       </section>
 
-      <section className="bg-white py-12 sm:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-warm-white py-12 sm:py-16 section-divider-up">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
           <GalleryGrid />
           <div className="mt-12 text-center">
-            <p className="text-gray-500 text-sm">
+            <p className="text-zinc text-sm font-mono">
               Bildene er plassholdere. Ekte prosjektbilder kommer snart.
             </p>
           </div>
