@@ -12,10 +12,10 @@ export default function GalleriPage() {
     <>
       <section className="bg-brand-blue text-white py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h1 className="animate-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
             Galleri
           </h1>
-          <p className="mt-4 text-lg text-white/80 max-w-2xl">
+          <p className="animate-hero-delay-1 mt-4 text-lg text-white/80 max-w-2xl">
             Her er et utvalg av jobber vi har utført. Ta gjerne kontakt for
             referanser eller mer informasjon om våre prosjekter.
           </p>
