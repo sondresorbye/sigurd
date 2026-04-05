@@ -165,7 +165,7 @@ export default function Home() {
                 anerkjente aktører i bransjen, har Sigurd vært involvert i alt fra
                 mindre reparasjoner til store prosjekter for borettslag og
                 næringseiendom, til sammen godt over{" "}
-                <strong className="text-gray-900">150 oppdrag</strong>.
+                <strong className="text-gray-900">1 000 prosjekter</strong>.
               </p>
               <p className="mt-3 text-lg text-gray-600 leading-relaxed">
                 Med Berman Blikk får du direkte kontakt med fagpersonen som
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
             {[
               { value: "5+", label: "Års erfaring" },
-              { value: "150+", label: "Oppdrag utført" },
+              { value: "1000+", label: "Prosjekter utført" },
               { value: "100%", label: "Personlig oppfølging" },
               { value: "Oslo", label: "Og hele omegn" },
             ].map((stat, i) => (
