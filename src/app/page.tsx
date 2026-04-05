@@ -94,8 +94,8 @@ export default function Home() {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
-              blikkenslager. Over 5 års erfaring i bransjen. Vi utfører alle
-              typer tak- og blikkenslagerarbeid i hele Oslo og omegn.
+              blikkenslageri. Over 5 års erfaring i bransjen. Vi utfører alle
+              typer tak- og blikkenslageri-arbeid i hele Oslo og omegn.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -150,7 +150,7 @@ export default function Home() {
               Sigurd Aamlid
             </h2>
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Med svennebrev innen ventilasjon og blikkenslager og over{" "}
+              Med svennebrev innen ventilasjon og blikkenslageri og over{" "}
               <strong className="text-gray-900">5 års erfaring</strong> fra to
               anerkjente aktører i bransjen, har Sigurd vært involvert i alt fra
               mindre reparasjoner til store prosjekter for borettslag og

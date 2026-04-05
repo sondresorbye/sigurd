@@ -11,7 +11,7 @@ export default function Footer() {
             </h3>
             <p className="text-white/70 text-sm leading-relaxed">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
-              blikkenslager. Tjenester i hele Oslo og omegn.
+              blikkenslageri. Tjenester i hele Oslo og omegn.
             </p>
           </div>
 
