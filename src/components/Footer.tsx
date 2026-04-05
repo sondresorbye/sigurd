@@ -10,7 +10,7 @@ export default function Footer() {
           <ScrollReveal animation="fade-up" delay={0}>
             <div>
               <Image
-                src="/logo.svg"
+                src="/logo-dark-bg.svg"
                 alt="Berman Blikk"
                 width={240}
                 height={98}

@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center group" aria-label="Berman Blikk – hjem">
             <Image
-              src="/logo.svg"
+              src="/logo-dark-bg.svg"
               alt="Berman Blikk"
               width={240}
               height={98}
