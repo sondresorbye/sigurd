@@ -90,8 +90,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
           <div className="max-w-3xl">
             <h1 className="animate-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Vi tar et{" "}
-              <span className="text-brand-red">tak</span> for deg!
+              Vi tar i et{" "}
+              <span className="text-brand-red">tak</span> for deg
             </h1>
             <p className="animate-hero-delay-1 mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
