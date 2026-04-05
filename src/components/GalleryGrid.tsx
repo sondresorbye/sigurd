@@ -12,34 +12,58 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&h=600&fit=crop",
-    alt: "Taktekking prosjekt",
-    caption: "Omlegging av takstein, enebolig i Oslo",
-  },
-  {
+    // Workers installing roof tiles on a house under construction
     src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-    alt: "Beslagsarbeid",
-    caption: "Beslagsarbeid og montering på nybygg",
+    alt: "Taktekking – legging av takstein",
+    caption: "Legging av takstein, rekkehus på Grorud",
   },
   {
+    // Close-up of roof tiles / completed tile roof
+    src: "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&h=600&fit=crop",
+    alt: "Ferdig lagt takstein",
+    caption: "Omlegging av takstein, enebolig i Bærum",
+  },
+  {
+    // Gutter and downpipe on a roof
     src: "https://images.unsplash.com/photo-1770277662704-8fc096960eb2?w=800&h=600&fit=crop",
-    alt: "Takrenner",
-    caption: "Nye takrenner og nedløpsrør",
+    alt: "Takrenner og nedløpsrør",
+    caption: "Nye takrenner og nedløpsrør, boligblokk på Østensjø",
   },
   {
-    src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
-    alt: "Takreparasjon",
-    caption: "Takreparasjon og lekkasjetetting",
+    // Sheet metal flashing / beslag work on roof
+    src: "https://images.unsplash.com/photo-1763665814485-a0a1b6f51ed7?w=800&h=600&fit=crop",
+    alt: "Beslagsarbeid og pipebeslag",
+    caption: "Beslagsarbeid og pipebeslag, nybygg på Lilleaker",
   },
   {
-    src: "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=800&h=600&fit=crop",
-    alt: "Skiferstein tak",
-    caption: "Skiferstein, villa på Nordstrand",
+    // Ventilation duct installation indoors
+    src: "https://images.pexels.com/photos/8297856/pexels-photo-8297856.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
+    alt: "Ventilasjon montering",
+    caption: "Ventilasjonsanlegg, næringsbygg på Skøyen",
   },
   {
-    src: "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?w=800&h=600&fit=crop",
-    alt: "Ventilasjon",
-    caption: "Ventilasjon montering og isolering",
+    // Ventilation insulation / lagging on ducts
+    src: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=800&h=600&fit=crop",
+    alt: "Ventilasjonsisolering",
+    caption: "Isolering av ventilasjonskanaler, kontorbygg på Majorstuen",
+  },
+  {
+    // Roof repair / maintenance work on roof
+    src: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=800&h=600&fit=crop",
+    alt: "Takreparasjon og service",
+    caption: "Takreparasjon og lekkasjetetting, borettslag på Stovner",
+  },
+  {
+    // Roof chimney flashing / luftehatt detail
+    src: "https://images.unsplash.com/photo-1683041717386-91a33191da42?w=800&h=600&fit=crop",
+    alt: "Luftehatter og pipebeslag",
+    caption: "Utskifting av luftehatter, enebolig på Nordstrand",
+  },
+  {
+    // Inspector / surveyor on roof – annual inspection
+    src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+    alt: "Takbefaring og tilstandsrapport",
+    caption: "Årlig ettersyn og tilstandsrapport, næringsbygg på Helsfyr",
   },
 ];
 

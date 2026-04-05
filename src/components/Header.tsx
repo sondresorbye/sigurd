@@ -10,7 +10,7 @@ export default function Header() {
 
   const links = [
     { href: "/", label: "Hjem" },
-    { href: "/galleri", label: "Galleri" },
+    { href: "/galleri", label: "Tidligere prosjekter" },
   ];
 
   return (
