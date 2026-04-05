@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -8,9 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ScrollReveal animation="fade-up" delay={0}>
             <div>
-              <h3 className="text-xl font-bold mb-3">
-                <span className="text-brand-red">Ber</span>man
-              </h3>
+              <Image
+                src="/logo-dark-bg.svg"
+                alt="Berman Blikk"
+                width={240}
+                height={98}
+                className="h-12 w-auto mb-3"
+              />
               <p className="text-white/70 text-sm leading-relaxed">
                 Enkeltpersonforetak med svennebrev innen ventilasjon og
                 blikkenslageri. Tjenester i hele Oslo og omegn.
