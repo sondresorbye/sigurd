@@ -12,34 +12,58 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?w=800&h=600&fit=crop",
-    alt: "Taktekking prosjekt",
-    caption: "Omlegging av takstein, enebolig i Oslo",
+    // Workers installing roof tiles on house under construction (Sergej Karpow, Unsplash)
+    src: "https://images.unsplash.com/photo-1763665814657-919dac53ea26?w=800&h=600&fit=crop",
+    alt: "Taktekking – legging av takstein",
+    caption: "Legging av takstein, rekkehus på Grorud",
   },
   {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-    alt: "Beslagsarbeid",
-    caption: "Beslagsarbeid og montering på nybygg",
+    // Construction workers installing roof tiles on new building (Sergej Karpow, Unsplash)
+    src: "https://images.unsplash.com/photo-1763665814965-b5c4b3547908?w=800&h=600&fit=crop",
+    alt: "Ferdig lagt takstein",
+    caption: "Omlegging av takstein, enebolig i Bærum",
   },
   {
-    src: "https://images.unsplash.com/photo-1770277662704-8fc096960eb2?w=800&h=600&fit=crop",
-    alt: "Takrenner",
-    caption: "Nye takrenner og nedløpsrør",
+    // Close-up of rain gutter on a roof (Luke Southern, Unsplash)
+    src: "https://images.unsplash.com/photo-1634853982486-c06f0e17940f?w=800&h=600&fit=crop",
+    alt: "Takrenner og nedløpsrør",
+    caption: "Nye takrenner og nedløpsrør, boligblokk på Østensjø",
   },
   {
-    src: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
-    alt: "Takreparasjon",
-    caption: "Takreparasjon og lekkasjetetting",
+    // Workers installing roof tiles / sheet metal work on roof (Sergej Karpow, Unsplash)
+    src: "https://images.unsplash.com/photo-1763665814485-a0a1b6f51ed7?w=800&h=600&fit=crop",
+    alt: "Beslagsarbeid og pipebeslag",
+    caption: "Beslagsarbeid og pipebeslag, nybygg på Lilleaker",
   },
   {
-    src: "https://images.unsplash.com/photo-1590725140246-20acdee442be?w=800&h=600&fit=crop",
-    alt: "Skiferstein tak",
-    caption: "Skiferstein, villa på Nordstrand",
+    // Industrial ventilation ductwork installation (Pexels)
+    src: "https://images.pexels.com/photos/8297856/pexels-photo-8297856.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
+    alt: "Ventilasjon montering",
+    caption: "Ventilasjonsanlegg, næringsbygg på Skøyen",
   },
   {
-    src: "https://images.unsplash.com/photo-1513880989635-6eb491ce7f5b?w=800&h=600&fit=crop",
-    alt: "Ventilasjon",
-    caption: "Ventilasjon montering og isolering",
+    // Ventilation duct insulation / lagging (Unsplash)
+    src: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=800&h=600&fit=crop",
+    alt: "Ventilasjonsisolering",
+    caption: "Isolering av ventilasjonskanaler, kontorbygg på Majorstuen",
+  },
+  {
+    // Man working on roof tiles / roof maintenance (Christer Lässman, Unsplash)
+    src: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=800&h=600&fit=crop",
+    alt: "Takreparasjon og service",
+    caption: "Takreparasjon og lekkasjetetting, borettslag på Stovner",
+  },
+  {
+    // Weathered dormer and brick chimney on a roof (Dariia Lemesheva, Unsplash)
+    src: "https://images.unsplash.com/photo-1742166562136-a43aff7de0ad?w=800&h=600&fit=crop",
+    alt: "Pipebeslag og luftehatter",
+    caption: "Utskifting av pipebeslag og luftehatter, enebolig på Nordstrand",
+  },
+  {
+    // Professional chimney inspection on rooftop (Pexels)
+    src: "https://images.pexels.com/photos/34020199/pexels-photo-34020199.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
+    alt: "Takbefaring og tilstandsrapport",
+    caption: "Årlig ettersyn og tilstandsrapport, næringsbygg på Helsfyr",
   },
 ];
 

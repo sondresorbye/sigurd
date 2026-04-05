@@ -40,7 +40,7 @@ export default function Footer() {
                     href="/galleri"
                     className="text-white/70 hover:text-white transition-colors"
                   >
-                    Galleri
+                    Tidligere prosjekter
                   </Link>
                 </li>
                 <li>
