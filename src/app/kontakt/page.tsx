@@ -103,10 +103,10 @@ export default function KontaktPage() {
                     <div>
                       <p className="text-sm text-gray-500">E-post</p>
                       <a
-                        href="mailto:post@bermanblikk.no"
+                        href="mailto:aamlid@bermanblikk.no"
                         className="font-medium text-gray-900 hover:text-brand-blue transition-colors"
                       >
-                        post@bermanblikk.no
+                        aamlid@bermanblikk.no
                       </a>
                     </div>
                   </div>
