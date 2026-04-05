@@ -19,8 +19,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              <span className="text-brand-red">Ber</span>
-              <span className="text-white">man</span>
+              <span className="text-brand-red">Berman</span>{" "}
+              <span className="text-white">Blikk</span>
             </span>
           </Link>
 
@@ -94,6 +94,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/kontakt"
+              onClick={() => setMenuOpen(false)}
+              className="block mt-2 text-center bg-brand-red hover:bg-brand-red-dark text-white px-4 py-3 rounded-md text-base font-semibold transition-colors"
+            >
+              Kontakt oss
+            </Link>
           </div>
         </div>
       )}

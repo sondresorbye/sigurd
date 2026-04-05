@@ -43,3 +43,100 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* ── Scroll-reveal base ── */
+.sr {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-duration: var(--sr-duration, 600ms);
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--sr-delay, 0ms);
+}
+
+.sr-fade-up {
+  transform: translateY(32px);
+}
+.sr-fade-down {
+  transform: translateY(-32px);
+}
+.sr-fade-left {
+  transform: translateX(-32px);
+}
+.sr-fade-right {
+  transform: translateX(32px);
+}
+.sr-fade-in {
+  transform: none;
+}
+.sr-scale-up {
+  transform: scale(0.92);
+}
+.sr-slide-up {
+  transform: translateY(48px);
+}
+
+.sr.sr-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .sr {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Hero entrance keyframes ── */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-hero {
+  animation: hero-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-delay-1 {
+  animation: hero-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-hero-delay-2 {
+  animation: hero-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero,
+  .animate-hero-delay-1,
+  .animate-hero-delay-2 {
+    animation: none !important;
+  }
+}
+
+/* ── Counter animation for stats ── */
+@keyframes count-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sr-visible .stat-value {
+  animation: count-pop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
