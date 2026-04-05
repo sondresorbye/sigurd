@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -17,11 +18,15 @@ export default function Header() {
     <header className="bg-brand-blue text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              <span className="text-brand-red">Berman</span>{" "}
-              <span className="text-white">Blikk</span>
-            </span>
+          <Link href="/" className="flex items-center group" aria-label="Berman Blikk – hjem">
+            <Image
+              src="/logo.svg"
+              alt="Berman Blikk"
+              width={240}
+              height={98}
+              className="h-10 sm:h-12 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
