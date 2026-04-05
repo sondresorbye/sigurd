@@ -36,7 +36,7 @@ const services: Service[] = [
   {
     title: "Ventilasjonsisolering",
     description: "Isolering av ventilasjonsanlegg for bedre energieffektivitet.",
-    image: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1684073891328-a97d7eb6eadd?w=600&h=400&fit=crop",
   },
   {
     title: "Takrenner og nedløpsrør",
@@ -90,13 +90,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
           <div className="max-w-3xl">
             <h1 className="animate-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Vi tar et{" "}
-              <span className="text-brand-red">tak</span> for deg!
+              Vi tar i et{" "}
+              <span className="text-brand-red">tak</span> for deg
             </h1>
             <p className="animate-hero-delay-1 mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
-              blikkenslager. Over 5 års erfaring i bransjen. Vi utfører alle
-              typer tak- og blikkenslagerarbeid i hele Oslo og omegn.
+              blikkenslageri. Over 5 års erfaring i bransjen. Vi utfører alle
+              typer tak- og blikkenslageri-arbeid i hele Oslo og omegn.
             </p>
             <div className="animate-hero-delay-2 mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -160,12 +160,12 @@ export default function Home() {
             </ScrollReveal>
             <ScrollReveal animation="fade-up" delay={200}>
               <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-                Med svennebrev innen ventilasjon og blikkenslager og over{" "}
+                Med svennebrev innen ventilasjon og blikkenslageri og over{" "}
                 <strong className="text-gray-900">5 års erfaring</strong> fra to
                 anerkjente aktører i bransjen, har Sigurd vært involvert i alt fra
                 mindre reparasjoner til store prosjekter for borettslag og
                 næringseiendom, til sammen godt over{" "}
-                <strong className="text-gray-900">150 oppdrag</strong>.
+                <strong className="text-gray-900">1 000 prosjekter</strong>.
               </p>
               <p className="mt-3 text-lg text-gray-600 leading-relaxed">
                 Med Berman Blikk får du direkte kontakt med fagpersonen som
@@ -178,7 +178,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
             {[
               { value: "5+", label: "Års erfaring" },
-              { value: "150+", label: "Oppdrag utført" },
+              { value: "1000+", label: "Prosjekter utført" },
               { value: "100%", label: "Personlig oppfølging" },
               { value: "Oslo", label: "Og hele omegn" },
             ].map((stat, i) => (

@@ -4,7 +4,7 @@ import GalleryGrid from "@/components/GalleryGrid";
 export const metadata: Metadata = {
   title: "Tidligere prosjekter | Berman Blikk",
   description:
-    "Se bilder fra våre fullførte prosjekter innen tak, blikkenslagerarbeid og ventilasjon i Oslo og omegn.",
+    "Se referanser og bilder fra våre fullførte prosjekter innen tak, blikkenslageri-arbeid og ventilasjon i Oslo og omegn.",
 };
 
 export default function GalleriPage() {
