@@ -18,8 +18,8 @@ const galleryImages: GalleryImage[] = [
     caption: "Legging av takstein, rekkehus på Grorud",
   },
   {
-    // Construction workers installing roof tiles on new building (Sergej Karpow, Unsplash)
-    src: "https://images.unsplash.com/photo-1763665814965-b5c4b3547908?w=800&h=600&fit=crop",
+    // Two men working on the roof of a house (Immo Wegmann, Unsplash)
+    src: "https://images.unsplash.com/photo-1681049400158-0ff6249ac315?w=800&h=600&fit=crop",
     alt: "Ferdig lagt takstein",
     caption: "Omlegging av takstein, enebolig i Bærum",
   },
@@ -30,8 +30,8 @@ const galleryImages: GalleryImage[] = [
     caption: "Nye takrenner og nedløpsrør, boligblokk på Østensjø",
   },
   {
-    // Workers installing roof tiles / sheet metal work on roof (Sergej Karpow, Unsplash)
-    src: "https://images.unsplash.com/photo-1763665814485-a0a1b6f51ed7?w=800&h=600&fit=crop",
+    // Workers repairing a damaged roof with debris (Yishen Ji, Unsplash)
+    src: "https://images.unsplash.com/photo-1760331840361-d751cfc1becf?w=800&h=600&fit=crop",
     alt: "Beslagsarbeid og pipebeslag",
     caption: "Beslagsarbeid og pipebeslag, nybygg på Lilleaker",
   },
@@ -60,8 +60,8 @@ const galleryImages: GalleryImage[] = [
     caption: "Utskifting av pipebeslag og luftehatter, enebolig på Nordstrand",
   },
   {
-    // Professional chimney inspection on rooftop (Pexels)
-    src: "https://images.pexels.com/photos/34020199/pexels-photo-34020199.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
+    // Man standing on the roof of a house – roofing project (Zohair Mirza, Unsplash)
+    src: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&h=600&fit=crop",
     alt: "Takbefaring og tilstandsrapport",
     caption: "Årlig ettersyn og tilstandsrapport, næringsbygg på Helsfyr",
   },
