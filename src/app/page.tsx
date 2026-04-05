@@ -36,7 +36,7 @@ const services: Service[] = [
   {
     title: "Ventilasjonsisolering",
     description: "Isolering av ventilasjonsanlegg for bedre energieffektivitet.",
-    image: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1684073891328-a97d7eb6eadd?w=600&h=400&fit=crop",
   },
   {
     title: "Takrenner og nedløpsrør",
