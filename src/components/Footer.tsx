@@ -121,7 +121,8 @@ export default function Footer() {
         </div>
 
         <ScrollReveal animation="fade-in" delay={300}>
-          <div className="border-t border-white/10 mt-8 pt-6 text-center text-sm text-white/50">
+          <div className="border-t border-white/10 mt-8 pt-6 text-center text-sm text-white/50 space-y-1">
+            <p>Aamlid Berman Blikk &mdash; Org.nr. 937 451 954</p>
             <p>&copy; {new Date().getFullYear()} Berman Blikk. Alle rettigheter reservert.</p>
           </div>
         </ScrollReveal>
