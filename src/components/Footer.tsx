@@ -87,10 +87,10 @@ export default function Footer() {
                     />
                   </svg>
                   <a
-                    href="mailto:post@bermanblikk.no"
+                    href="mailto:aamlid@bermanblikk.no"
                     className="hover:text-white transition-colors"
                   >
-                    post@bermanblikk.no
+                    aamlid@bermanblikk.no
                   </a>
                 </li>
                 <li className="flex items-start gap-2">

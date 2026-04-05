@@ -23,7 +23,7 @@ export default function ContactForm() {
         `Melding:\n${data.get("message")}`
     );
 
-    window.location.href = `mailto:post@bermanblikk.no?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:aamlid@bermanblikk.no?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
 
