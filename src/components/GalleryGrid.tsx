@@ -8,6 +8,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 interface GalleryImage {
   src: string;
   alt: string;
+  objectPosition?: string;
 }
 
 const galleryImages: GalleryImage[] = [
@@ -26,6 +27,11 @@ const galleryImages: GalleryImage[] = [
   {
     src: "/images/1000029382.jpg",
     alt: "Sigurd på tak med sikkerhetsutstyr",
+  },
+  {
+    src: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
+    alt: "Arbeid på tak av tradisjonelt hvitt hus",
+    objectPosition: "center 30%",
   },
 ];
 
@@ -131,6 +137,7 @@ function LightboxCarousel({
                     className="object-cover"
                     sizes="100vw"
                     priority={Math.abs(index - startIndex) <= 1}
+                    style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                   />
                 </div>
               </div>
@@ -202,6 +209,7 @@ export default function GalleryGrid() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
               />
             </button>
           </ScrollReveal>
