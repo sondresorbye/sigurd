@@ -8,57 +8,24 @@ import ScrollReveal from "@/components/ScrollReveal";
 interface GalleryImage {
   src: string;
   alt: string;
-  caption: string;
 }
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1763665814657-919dac53ea26?w=800&h=600&fit=crop",
-    alt: "Taktekking – legging av takstein",
-    caption: "Legging av takstein, rekkehus på Grorud",
+    src: "/images/1000029375.jpg",
+    alt: "Sigurd på taket med takstein",
   },
   {
-    // Two men working on the roof of a house (Immo Wegmann, Unsplash)
-    src: "https://images.unsplash.com/photo-1681049400158-0ff6249ac315?w=800&h=600&fit=crop",
-    alt: "Ferdig lagt takstein",
-    caption: "Omlegging av takstein, enebolig i Bærum",
+    src: "/images/1000029376.jpg",
+    alt: "Sigurd sitter på takmønet med utsikt",
   },
   {
-    src: "https://images.unsplash.com/photo-1634853982486-c06f0e17940f?w=800&h=600&fit=crop",
-    alt: "Takrenner og nedløpsrør",
-    caption: "Nye takrenner og nedløpsrør, boligblokk på Østensjø",
+    src: "/images/1000029381.jpg",
+    alt: "Sigurd ved luftehatt på tak",
   },
   {
-    // Workers repairing a damaged roof with debris (Yishen Ji, Unsplash)
-    src: "https://images.unsplash.com/photo-1760331840361-d751cfc1becf?w=800&h=600&fit=crop",
-    alt: "Beslagsarbeid og pipebeslag",
-    caption: "Beslagsarbeid og pipebeslag, nybygg på Lilleaker",
-  },
-  {
-    src: "https://images.pexels.com/photos/8297856/pexels-photo-8297856.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    alt: "Ventilasjon montering",
-    caption: "Ventilasjonsanlegg, næringsbygg på Skøyen",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1759646827242-cf09e30709aa?w=800&h=600&fit=crop",
-    alt: "Ventilasjonsisolering",
-    caption: "Isolering av ventilasjonskanaler, kontorbygg på Majorstuen",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=800&h=600&fit=crop",
-    alt: "Takreparasjon og service",
-    caption: "Takreparasjon og lekkasjetetting, borettslag på Stovner",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1742166562136-a43aff7de0ad?w=800&h=600&fit=crop",
-    alt: "Pipebeslag og luftehatter",
-    caption: "Utskifting av pipebeslag og luftehatter, enebolig på Nordstrand",
-  },
-  {
-    // Man standing on the roof of a house – roofing project (Zohair Mirza, Unsplash)
-    src: "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=800&h=600&fit=crop",
-    alt: "Takbefaring og tilstandsrapport",
-    caption: "Årlig ettersyn og tilstandsrapport, næringsbygg på Helsfyr",
+    src: "/images/1000029382.jpg",
+    alt: "Sigurd på tak med sikkerhetsutstyr",
   },
 ];
 
@@ -166,9 +133,6 @@ function LightboxCarousel({
                     priority={Math.abs(index - startIndex) <= 1}
                   />
                 </div>
-                <p className="text-white text-center mt-4 text-base sm:text-lg px-4">
-                  {image.caption}
-                </p>
               </div>
             ))}
           </div>
@@ -239,10 +203,6 @@ export default function GalleryGrid() {
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-white text-sm font-medium">{image.caption}</p>
-              </div>
             </button>
           </ScrollReveal>
         ))}

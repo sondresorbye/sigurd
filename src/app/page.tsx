@@ -2,10 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
+interface ServiceImage {
+  src: string;
+  objectPosition?: string;
+}
+
 interface Service {
   title: string;
   description: string;
   image: string;
+  objectPosition?: string;
+  images?: ServiceImage[];
 }
 
 const services: Service[] = [
@@ -72,13 +79,24 @@ const services: Service[] = [
     title: "Årlig ettersyn og tilstandsrapporter",
     description:
       "Regelmessig kontroll og dokumenterte tilstandsrapporter.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    image: "/images/1000029379.jpg",
   },
   {
     title: "Gratis vurdering",
     description:
       "Vi tar ingen ting for å komme med forslag til løsninger. Få en annenparts mening.",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Pyntegjenstander",
+    description:
+      "Montering og produsering av dekorative elementer slik som kobberarbeid og kunstarbeid.",
+    image: "/images/24046B2D-04DE-4C61-A4F3-10106A36A73E.JPG",
+    objectPosition: "center 35%",
+    images: [
+      { src: "/images/24046B2D-04DE-4C61-A4F3-10106A36A73E.JPG", objectPosition: "center 35%" },
+      { src: "/images/1000026674.jpg", objectPosition: "center top" },
+    ],
   },
 ];
 
@@ -90,8 +108,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
           <div className="max-w-3xl">
             <h1 className="animate-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Vi tar i et{" "}
-              <span className="text-brand-red">tak</span> for deg
+              Sterk på{" "}
+              <span className="text-brand-red">tak</span>
             </h1>
             <p className="animate-hero-delay-1 mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
@@ -141,10 +159,11 @@ export default function Home() {
             <ScrollReveal animation="scale-up">
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-lg border-4 border-brand-blue/10">
                 <Image
-                  src="/images/sigurd-cropped.png"
+                  src="/images/1000029375.jpg"
                   alt="Sigurd Aamlid"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
+                  style={{ objectPosition: "65% 45%", transform: "scale(1.5)", transformOrigin: "65% 45%" }}
                   sizes="(max-width: 768px) 192px, 224px"
                   priority
                 />
@@ -165,7 +184,7 @@ export default function Home() {
                 anerkjente aktører i bransjen, har Sigurd vært involvert i alt fra
                 mindre reparasjoner til store prosjekter for borettslag og
                 næringseiendom, til sammen godt over{" "}
-                <strong className="text-gray-900">1 000 prosjekter</strong>.
+                <strong className="text-gray-900">500 prosjekter</strong>.
               </p>
               <p className="mt-3 text-lg text-gray-600 leading-relaxed">
                 Med Berman Blikk får du direkte kontakt med fagpersonen som
@@ -178,7 +197,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-12">
             {[
               { value: "5+", label: "Års erfaring" },
-              { value: "1000+", label: "Prosjekter utført" },
+              { value: "500+", label: "Prosjekter utført" },
               { value: "100%", label: "Personlig oppfølging" },
               { value: "Oslo", label: "Og hele omegn" },
             ].map((stat, i) => (
@@ -205,9 +224,14 @@ export default function Home() {
       <section className="bg-gray-50 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-4">
               Våre tjenester
             </h2>
+          </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={100}>
+            <p className="text-center text-gray-500 text-sm mb-12">
+              Reelle bilder fra våre prosjekter vil bli lagt til snart.
+            </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, i) => (
@@ -217,15 +241,33 @@ export default function Home() {
                 delay={(i % 3) * 100}
               >
                 <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 group">
-                  <div className="relative h-44 overflow-hidden bg-gray-200">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
+                  {service.images ? (
+                    <div className="flex h-44 overflow-hidden bg-gray-200">
+                      {service.images.map((img, j) => (
+                        <div key={j} className="relative flex-1 overflow-hidden">
+                          <Image
+                            src={img.src}
+                            alt={`${service.title} ${j + 1}`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
+                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 17vw"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="relative h-44 overflow-hidden bg-gray-200">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   <div className="p-5">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {service.title}

@@ -24,6 +24,9 @@ export default function GalleriPage() {
 
       <section className="bg-white py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-500 text-sm mb-10">
+            Flere bilder fra våre prosjekter vil bli lagt til snart.
+          </p>
           <GalleryGrid />
         </div>
       </section>
