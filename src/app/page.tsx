@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
+import FeaturedProjects from "@/components/FeaturedProjects";
 
 interface ServiceImage {
   src: string;
@@ -20,25 +21,25 @@ const services: Service[] = [
     title: "Takstein / Skiferstein",
     description:
       "Legging og reparasjon av takstein og skiferstein på alle typer bygg.",
-    image: "https://images.unsplash.com/photo-1767544050173-e0101f579932?w=600&h=400&fit=crop",
+    image: "/images/prosjekt-svart-hus.jpg",
   },
   {
     title: "Takplater / Båndtekking",
     description:
       "Montering av takplater og båndtekking for nye og eksisterende tak.",
-    image: "https://images.unsplash.com/photo-1711666576531-b39c29414e12?w=600&h=400&fit=crop",
+    image: "/images/1000029376.jpg",
   },
   {
     title: "Beslagsarbeider og produksjon",
     description:
       "Skreddersydde beslag, produksjon og montering etter dine behov.",
-    image: "https://images.unsplash.com/photo-1763665814485-a0a1b6f51ed7?w=600&h=400&fit=crop",
+    image: "/images/4194D153-BA41-4449-AF83-5224E684BC40.JPG",
   },
   {
     title: "Ventilasjon montering",
     description:
       "Enkel ventilasjon montering og prosjektering for boliger og næring.",
-    image: "https://images.pexels.com/photos/8297856/pexels-photo-8297856.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+    image: "/images/1000029381.jpg",
   },
   {
     title: "Ventilasjonsisolering",
@@ -49,31 +50,31 @@ const services: Service[] = [
     title: "Takrenner og nedløpsrør",
     description:
       "Montering, reparasjon og vedlikehold av takrenner og nedløpsrør.",
-    image: "https://images.unsplash.com/photo-1770277662704-8fc096960eb2?w=600&h=400&fit=crop",
+    image: "/images/prosjekt-takrenner.jpg",
   },
   {
     title: "Luftehatter / Pipebeslag",
     description:
       "Montering og utskifting av luftehatter og pipebeslag for god tetting.",
-    image: "https://images.unsplash.com/photo-1683041717386-91a33191da42?w=600&h=400&fit=crop",
+    image: "/images/prosjekt-pipebeslag.jpg",
   },
   {
     title: "Snøfangere",
     description:
       "Montering av snøfangere for å sikre taket gjennom vinteren.",
-    image: "https://images.unsplash.com/photo-1517299321609-52687d1bc55a?w=600&h=400&fit=crop",
+    image: "/images/1000029379.jpg",
   },
   {
     title: "Takreparasjoner og service",
     description:
       "Alle typer takreparasjoner og løpende serviceoppdrag.",
-    image: "https://images.unsplash.com/photo-1726589004565-bedfba94d3a2?w=600&h=400&fit=crop",
+    image: "/images/1000029382.jpg",
   },
   {
     title: "Lekkasjesøking / Tetting",
     description:
       "Effektiv lekkasjesøking og tetting for å beskytte bygget ditt.",
-    image: "https://images.unsplash.com/photo-1760331840361-d751cfc1becf?w=600&h=400&fit=crop",
+    image: "/images/1000029376.jpg",
   },
   {
     title: "Årlig ettersyn og tilstandsrapporter",
@@ -85,7 +86,7 @@ const services: Service[] = [
     title: "Gratis vurdering",
     description:
       "Vi tar ingen ting for å komme med forslag til løsninger. Få en annenparts mening.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+    image: "/images/1000029375.jpg",
   },
   {
     title: "Pyntegjenstander",
@@ -95,6 +96,7 @@ const services: Service[] = [
     objectPosition: "center 35%",
     images: [
       { src: "/images/24046B2D-04DE-4C61-A4F3-10106A36A73E.JPG", objectPosition: "center 35%" },
+      { src: "/images/8FFE8AEF-B712-4018-BB3B-0EB403585176.JPG" },
       { src: "/images/1000026674.jpg", objectPosition: "center top" },
     ],
   },
@@ -220,18 +222,15 @@ export default function Home() {
         </div>
       </section>
 
+      <FeaturedProjects />
+
       {/* Services */}
       <section className="bg-gray-50 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">
               Våre tjenester
             </h2>
-          </ScrollReveal>
-          <ScrollReveal animation="fade-up" delay={100}>
-            <p className="text-center text-gray-500 text-sm mb-12">
-              Reelle bilder fra våre prosjekter vil bli lagt til snart.
-            </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, i) => (

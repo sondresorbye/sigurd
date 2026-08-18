@@ -16,17 +16,14 @@ export default function GalleriPage() {
             Tidligere prosjekter
           </h1>
           <p className="animate-hero-delay-1 mt-4 text-lg text-white/80 max-w-2xl">
-            Her er et utvalg av jobber vi har utført innen tak, beslag og
-            ventilasjon. Ta gjerne kontakt for referanser eller mer informasjon.
+            Bilder fra takarbeid, beslag og skreddersydd metallarbeid vi har
+            utført. Ta gjerne kontakt for referanser eller mer informasjon.
           </p>
         </div>
       </section>
 
       <section className="bg-white py-12 sm:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-500 text-sm mb-10">
-            Flere bilder fra våre prosjekter vil bli lagt til snart.
-          </p>
           <GalleryGrid />
         </div>
       </section>

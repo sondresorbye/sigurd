@@ -4,36 +4,7 @@ import Image from "next/image";
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import ScrollReveal from "@/components/ScrollReveal";
-
-interface GalleryImage {
-  src: string;
-  alt: string;
-  objectPosition?: string;
-}
-
-const galleryImages: GalleryImage[] = [
-  {
-    src: "/images/1000029375.jpg",
-    alt: "Sigurd på taket med takstein",
-  },
-  {
-    src: "/images/1000029376.jpg",
-    alt: "Sigurd sitter på takmønet med utsikt",
-  },
-  {
-    src: "/images/1000029381.jpg",
-    alt: "Sigurd ved luftehatt på tak",
-  },
-  {
-    src: "/images/1000029382.jpg",
-    alt: "Sigurd på tak med sikkerhetsutstyr",
-  },
-  {
-    src: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
-    alt: "Arbeid på tak av tradisjonelt hvitt hus",
-    objectPosition: "center 30%",
-  },
-];
+import { galleryImages } from "@/data/gallery";
 
 function LightboxCarousel({
   startIndex,
@@ -140,6 +111,9 @@ function LightboxCarousel({
                     style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                   />
                 </div>
+                <p className="mt-3 text-white/80 text-sm font-medium">
+                  {image.caption}
+                </p>
               </div>
             ))}
           </div>
@@ -201,16 +175,21 @@ export default function GalleryGrid() {
           >
             <button
               onClick={() => setSelectedIndex(index)}
-              className="group relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer text-left"
+              className="group w-full text-left"
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
-              />
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
+                />
+              </div>
+              <p className="mt-2.5 text-sm font-medium text-gray-800">
+                {image.caption}
+              </p>
             </button>
           </ScrollReveal>
         ))}
