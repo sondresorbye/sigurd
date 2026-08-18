@@ -21,8 +21,7 @@ const services: Service[] = [
     title: "Takstein / Skiferstein",
     description:
       "Legging og reparasjon av takstein og skiferstein på alle typer bygg.",
-    image: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
-    objectPosition: "center 30%",
+    image: "/images/prosjekt-svart-hus.jpg",
   },
   {
     title: "Takplater / Båndtekking",
@@ -51,13 +50,13 @@ const services: Service[] = [
     title: "Takrenner og nedløpsrør",
     description:
       "Montering, reparasjon og vedlikehold av takrenner og nedløpsrør.",
-    image: "/images/1000029375.jpg",
+    image: "/images/prosjekt-takrenner.jpg",
   },
   {
     title: "Luftehatter / Pipebeslag",
     description:
       "Montering og utskifting av luftehatter og pipebeslag for god tetting.",
-    image: "/images/1000029381.jpg",
+    image: "/images/prosjekt-pipebeslag.jpg",
   },
   {
     title: "Snøfangere",

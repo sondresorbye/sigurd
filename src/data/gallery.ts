@@ -5,8 +5,47 @@ export interface GalleryImage {
   objectPosition?: string;
 }
 
-/** All real project photos, shown in the gallery and as homepage previews. */
+/**
+ * Drop the six new project photos into `public/images/` with these exact names:
+ *   prosjekt-takrenner.jpg
+ *   prosjekt-pipebeslag.jpg
+ *   prosjekt-svart-hus.jpg
+ *   prosjekt-pipe-detalj.jpg
+ *   prosjekt-takmoene.jpg
+ *   prosjekt-luftehatt.jpg
+ * They show first on the homepage and in the gallery.
+ */
 export const galleryImages: GalleryImage[] = [
+  {
+    src: "/images/prosjekt-takrenner.jpg",
+    alt: "Nye takrenner montert langs takfot med stillas",
+    caption: "Takrenner og stillas",
+  },
+  {
+    src: "/images/prosjekt-pipebeslag.jpg",
+    alt: "Svart pipebeslag i blikk på teglsteinstak",
+    caption: "Pipebeslag",
+  },
+  {
+    src: "/images/prosjekt-svart-hus.jpg",
+    alt: "Moderne hus med svart takstein og svarte pipebeslag",
+    caption: "Svart tak og pipebeslag",
+  },
+  {
+    src: "/images/prosjekt-pipe-detalj.jpg",
+    alt: "Nærbilde av svart pipebeslag tilpasset takstein",
+    caption: "Pipebeslag, detalj",
+  },
+  {
+    src: "/images/prosjekt-takmoene.jpg",
+    alt: "Takmøne med to svarte pipebeslag",
+    caption: "Takmøne og piper",
+  },
+  {
+    src: "/images/prosjekt-luftehatt.jpg",
+    alt: "Svart pipebeslag med luftehatt på tak",
+    caption: "Luftehatt og pipebeslag",
+  },
   {
     src: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
     alt: "Takarbeid på tradisjonelt hvitt trehus med skifertak",
