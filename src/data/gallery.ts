@@ -34,7 +34,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-pipe-detalj.jpg",
     alt: "Nærbilde av svart pipebeslag tilpasset takstein",
-    caption: "Pipebeslag, detalj",
+    caption: "Luftehatt med ett integrert soilerrør",
   },
   {
     src: "/images/prosjekt-takmoene.jpg",
@@ -44,7 +44,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-luftehatt.jpg",
     alt: "Svart pipebeslag med luftehatt på tak",
-    caption: "Luftehatt og pipebeslag",
+    caption: "Pipebeslag med vifte",
   },
   {
     src: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
@@ -60,7 +60,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/1000029379.jpg",
     alt: "Montering og kontroll av snøfangere på teglsteinstak",
-    caption: "Snøfangere og takarbeid",
+    caption: "Snøfangere og taksikringer",
   },
   {
     src: "/images/1000029375.jpg",
