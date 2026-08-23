@@ -115,7 +115,8 @@ export default function Home() {
             <p className="animate-hero-delay-1 mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Enkeltpersonforetak med svennebrev innen ventilasjon og
               blikkenslageri. Over 5 års erfaring i bransjen. Vi utfører alle
-              typer tak- og blikkenslageri-arbeid i hele Oslo og omegn.
+              typer tak- og blikkenslageri-arbeid i hele Oslo og omegn, med
+              unntak av torv.
             </p>
             <div className="animate-hero-delay-2 mt-8 flex flex-col sm:flex-row gap-4">
               <Link

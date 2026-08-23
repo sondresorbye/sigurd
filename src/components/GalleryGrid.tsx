@@ -100,12 +100,12 @@ function LightboxCarousel({
                 key={index}
                 className="flex-[0_0_100%] min-w-0 flex flex-col items-center justify-center"
               >
-                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="100vw"
                     priority={Math.abs(index - startIndex) <= 1}
                     style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
@@ -177,12 +177,12 @@ export default function GalleryGrid() {
               onClick={() => setSelectedIndex(index)}
               className="group w-full text-left"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-200 cursor-pointer">
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                 />
