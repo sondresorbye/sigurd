@@ -19,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-takrenner.jpg",
     alt: "Nye takrenner montert langs takfot med stillas",
-    caption: "Takrenner og stillas",
+    caption: "Takrenner",
   },
   {
     src: "/images/prosjekt-pipebeslag.jpg",
