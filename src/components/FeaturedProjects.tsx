@@ -26,12 +26,12 @@ export default function FeaturedProjects() {
               delay={(i % 3) * 100}
             >
               <Link href="/galleri" className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200">
+                <div className="relative aspect-[3/2] overflow-hidden rounded-lg bg-gray-200">
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className={`${image.objectFit === "contain" ? "object-contain bg-gray-100" : "object-cover"} transition-transform duration-300 ${image.objectFit === "contain" ? "" : "group-hover:scale-105"}`}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     style={
                       image.objectPosition

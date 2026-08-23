@@ -13,6 +13,7 @@ interface Service {
   description: string;
   image: string;
   objectPosition?: string;
+  objectFit?: "cover" | "contain";
   images?: ServiceImage[];
 }
 
@@ -51,12 +52,14 @@ const services: Service[] = [
     description:
       "Montering, reparasjon og vedlikehold av takrenner og nedløpsrør.",
     image: "/images/prosjekt-takrenner.jpg",
+    objectPosition: "left center",
   },
   {
     title: "Luftehatter / Pipebeslag",
     description:
       "Montering og utskifting av luftehatter og pipebeslag for god tetting.",
     image: "/images/prosjekt-pipebeslag.jpg",
+    objectFit: "contain",
   },
   {
     title: "Snøfangere",
@@ -257,12 +260,12 @@ export default function Home() {
                       ))}
                     </div>
                   ) : (
-                    <div className="relative h-44 overflow-hidden bg-gray-200">
+                    <div className="relative h-44 overflow-hidden bg-gray-100">
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        className={`${service.objectFit === "contain" ? "object-contain" : "object-cover"} ${service.objectFit === "contain" ? "" : "group-hover:scale-105"} transition-transform duration-300`}
                         style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />

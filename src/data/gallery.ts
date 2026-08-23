@@ -3,48 +3,45 @@ export interface GalleryImage {
   alt: string;
   caption: string;
   objectPosition?: string;
+  /** Default cover. Use contain to show the whole subject (e.g. full chimney). */
+  objectFit?: "cover" | "contain";
 }
 
-/**
- * Drop the six new project photos into `public/images/` with these exact names:
- *   prosjekt-takrenner.jpg
- *   prosjekt-pipebeslag.jpg
- *   prosjekt-svart-hus.jpg
- *   prosjekt-pipe-detalj.jpg
- *   prosjekt-takmoene.jpg
- *   prosjekt-luftehatt.jpg
- * They show first on the homepage and in the gallery.
- */
 export const galleryImages: GalleryImage[] = [
-  {
-    src: "/images/prosjekt-takrenner.jpg",
-    alt: "Nye takrenner montert langs takfot med stillas",
-    caption: "Takrenner og stillas",
-  },
-  {
-    src: "/images/prosjekt-pipebeslag.jpg",
-    alt: "Svart pipebeslag i blikk på teglsteinstak",
-    caption: "Pipebeslag",
-  },
   {
     src: "/images/prosjekt-svart-hus.jpg",
     alt: "Moderne hus med svart takstein og svarte pipebeslag",
     caption: "Svart tak og pipebeslag",
   },
   {
-    src: "/images/prosjekt-pipe-detalj.jpg",
-    alt: "Nærbilde av svart pipebeslag tilpasset takstein",
-    caption: "Pipebeslag, detalj",
-  },
-  {
     src: "/images/prosjekt-takmoene.jpg",
     alt: "Takmøne med to svarte pipebeslag",
     caption: "Takmøne og piper",
+    objectFit: "contain",
+  },
+  {
+    src: "/images/prosjekt-pipebeslag.jpg",
+    alt: "Svart pipebeslag i blikk på teglsteinstak",
+    caption: "Pipebeslag",
+    objectFit: "contain",
   },
   {
     src: "/images/prosjekt-luftehatt.jpg",
     alt: "Svart pipebeslag med luftehatt på tak",
     caption: "Luftehatt og pipebeslag",
+    objectFit: "contain",
+  },
+  {
+    src: "/images/prosjekt-pipe-detalj.jpg",
+    alt: "Svart pipebeslag tilpasset takstein",
+    caption: "Pipebeslag, detalj",
+    objectFit: "contain",
+  },
+  {
+    src: "/images/prosjekt-takrenner.jpg",
+    alt: "Nye svarte takrenner montert langs takfot",
+    caption: "Takrenner",
+    objectPosition: "left center",
   },
   {
     src: "/images/42D20209-88AB-4607-8413-58037ADF5009.JPG",
@@ -101,4 +98,5 @@ export const galleryImages: GalleryImage[] = [
   },
 ];
 
-export const featuredProjectImages = galleryImages.slice(0, 6);
+/** Homepage strip: the black-roof job, without the gutter shot from the scaffold. */
+export const featuredProjectImages = galleryImages.slice(0, 5);
