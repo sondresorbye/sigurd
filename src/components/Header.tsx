@@ -22,7 +22,7 @@ export default function Header() {
             <Image
               src="/logo-dark-bg.svg"
               alt="Berman Blikk"
-              width={240}
+              width={359}
               height={98}
               className="h-10 sm:h-12 w-auto"
               priority

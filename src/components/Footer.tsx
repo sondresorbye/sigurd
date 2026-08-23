@@ -12,7 +12,7 @@ export default function Footer() {
               <Image
                 src="/logo-dark-bg.svg"
                 alt="Berman Blikk"
-                width={240}
+                width={359}
                 height={98}
                 className="h-12 w-auto mb-3"
               />
