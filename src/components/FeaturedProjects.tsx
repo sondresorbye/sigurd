@@ -26,7 +26,7 @@ export default function FeaturedProjects() {
               delay={(i % 3) * 100}
             >
               <Link href="/galleri" className="group block">
-                <div className="relative aspect-video overflow-hidden rounded-lg bg-black">
+                <div className="relative aspect-video overflow-hidden rounded-lg bg-[lightgray]">
                   <Image
                     src={image.src}
                     alt={image.alt}

@@ -100,7 +100,7 @@ function LightboxCarousel({
                 key={index}
                 className="flex-[0_0_100%] min-w-0 flex flex-col items-center justify-center"
               >
-                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-black">
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]">
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -177,7 +177,7 @@ export default function GalleryGrid() {
               onClick={() => setSelectedIndex(index)}
               className="group w-full text-left"
             >
-              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-black cursor-pointer">
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer">
                 <Image
                   src={image.src}
                   alt={image.alt}
