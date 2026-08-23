@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import FeaturedProjects from "@/components/FeaturedProjects";
 
 interface ServiceImage {
   src: string;
@@ -222,8 +221,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <FeaturedProjects />
 
       {/* Services */}
       <section className="bg-gray-50 py-16 sm:py-20">

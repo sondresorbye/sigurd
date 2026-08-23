@@ -13,7 +13,7 @@ export interface GalleryImage {
  *   prosjekt-pipe-detalj.jpg
  *   prosjekt-takmoene.jpg
  *   prosjekt-luftehatt.jpg
- * They show first on the homepage and in the gallery.
+ * They show first in the gallery.
  */
 export const galleryImages: GalleryImage[] = [
   {
@@ -100,5 +100,3 @@ export const galleryImages: GalleryImage[] = [
     objectPosition: "center top",
   },
 ];
-
-export const featuredProjectImages = galleryImages.slice(0, 6);
