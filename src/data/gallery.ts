@@ -6,7 +6,9 @@ export interface GalleryImage {
 }
 
 /**
- * Drop the six new project photos into `public/images/` with these exact names:
+ * Drop project photos into `public/images/` with these exact names:
+ *   prosjekt-pipekasse-sort.jpg
+ *   prosjekt-sort-pipebeslag-tegl.jpg
  *   prosjekt-takrenner.jpg
  *   prosjekt-pipebeslag.jpg
  *   prosjekt-svart-hus.jpg
@@ -16,6 +18,16 @@ export interface GalleryImage {
  * They show first in the gallery.
  */
 export const galleryImages: GalleryImage[] = [
+  {
+    src: "/images/prosjekt-pipekasse-sort.jpg",
+    alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
+    caption: "Sort pipekasse",
+  },
+  {
+    src: "/images/prosjekt-sort-pipebeslag-tegl.jpg",
+    alt: "Blank svart pipeinnkledning med buet topp og tette beslag mot takstein",
+    caption: "Sort pipebeslag på tegltak",
+  },
   {
     src: "/images/prosjekt-takrenner.jpg",
     alt: "Nye takrenner montert langs takfot med stillas",
