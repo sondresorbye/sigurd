@@ -24,8 +24,6 @@ export const galleryImages: GalleryImage[] = [
     src: "/images/prosjekt-pipekasse-sort.jpg",
     alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
     caption: "Sort pipekasse",
-    zoom: 2,
-    zoomOrigin: "53% 48%",
   },
   {
     src: "/images/prosjekt-sort-pipebeslag-tegl.jpg",
