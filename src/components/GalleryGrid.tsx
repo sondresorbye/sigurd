@@ -4,7 +4,19 @@ import Image from "next/image";
 import { useState, useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import { galleryImages } from "@/data/gallery";
+import { GalleryImage, galleryImages } from "@/data/gallery";
+
+function imageStyle(image: GalleryImage) {
+  return {
+    ...(image.objectPosition ? { objectPosition: image.objectPosition } : {}),
+    ...(image.zoom
+      ? {
+          transform: `scale(${image.zoom})`,
+          transformOrigin: image.zoomOrigin ?? "center",
+        }
+      : {}),
+  };
+}
 
 function LightboxCarousel({
   startIndex,
@@ -108,7 +120,7 @@ function LightboxCarousel({
                     className="object-contain"
                     sizes="100vw"
                     priority={Math.abs(index - startIndex) <= 1}
-                    style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
+                    style={imageStyle(image)}
                   />
                 </div>
                 <p className="mt-3 text-white/80 text-sm font-medium">
@@ -184,7 +196,7 @@ export default function GalleryGrid() {
                   fill
                   className="object-contain"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
+                  style={imageStyle(image)}
                 />
               </div>
               <p className="mt-2.5 text-sm font-medium text-gray-800">

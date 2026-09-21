@@ -3,6 +3,8 @@ export interface GalleryImage {
   alt: string;
   caption: string;
   objectPosition?: string;
+  zoom?: number;
+  zoomOrigin?: string;
 }
 
 /**
@@ -22,6 +24,8 @@ export const galleryImages: GalleryImage[] = [
     src: "/images/prosjekt-pipekasse-sort.jpg",
     alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
     caption: "Sort pipekasse",
+    zoom: 1.35,
+    zoomOrigin: "52% 48%",
   },
   {
     src: "/images/prosjekt-sort-pipebeslag-tegl.jpg",
