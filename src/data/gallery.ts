@@ -22,7 +22,7 @@ export interface GalleryImage {
  */
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/images/prosjekt-pipekasse-sort-skorstein-portrett.jpg",
+    src: "/images/prosjekt-pipekasse-sort-skorstein-sidefokus.jpg",
     alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
     caption: "Sort pipekasse",
     aspect: "portrait",
