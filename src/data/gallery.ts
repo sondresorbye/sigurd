@@ -6,6 +6,7 @@ export interface GalleryImage {
   zoom?: number;
   zoomOrigin?: string;
   aspect?: "video" | "portrait";
+  frame?: "gray";
 }
 
 /**
@@ -25,7 +26,7 @@ export const galleryImages: GalleryImage[] = [
     src: "/images/prosjekt-pipekasse-sort-skorstein-portrett.jpg",
     alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
     caption: "Sort pipekasse",
-    aspect: "portrait",
+    frame: "gray",
   },
   {
     src: "/images/prosjekt-sort-pipebeslag-tegl.jpg",
