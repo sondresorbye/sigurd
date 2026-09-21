@@ -18,6 +18,18 @@ function imageStyle(image: GalleryImage) {
   };
 }
 
+function imageFrameClass(image: GalleryImage, mode: "grid" | "lightbox") {
+  if (image.aspect === "portrait") {
+    return mode === "lightbox"
+      ? "relative mx-auto w-full max-w-sm aspect-[574/999] rounded-lg overflow-hidden bg-[lightgray]"
+      : "relative aspect-[574/999] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
+  }
+
+  return mode === "lightbox"
+    ? "relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]"
+    : "relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
+}
+
 function LightboxCarousel({
   startIndex,
   onClose,
@@ -112,7 +124,7 @@ function LightboxCarousel({
                 key={index}
                 className="flex-[0_0_100%] min-w-0 flex flex-col items-center justify-center"
               >
-                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]">
+                <div className={imageFrameClass(image, "lightbox")}>
                   <Image
                     src={image.src}
                     alt={image.alt}
@@ -189,7 +201,7 @@ export default function GalleryGrid() {
               onClick={() => setSelectedIndex(index)}
               className="group w-full text-left"
             >
-              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer">
+              <div className={imageFrameClass(image, "grid")}>
                 <Image
                   src={image.src}
                   alt={image.alt}
