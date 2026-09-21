@@ -25,6 +25,12 @@ function imageFrameClass(image: GalleryImage, mode: "grid" | "lightbox") {
       : "relative aspect-[574/999] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
   }
 
+  if (image.aspect === "narrowPortrait") {
+    return mode === "lightbox"
+      ? "relative mx-auto w-full max-w-xs aspect-[465/945] rounded-lg overflow-hidden bg-[lightgray]"
+      : "relative aspect-[465/945] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
+  }
+
   return mode === "lightbox"
     ? "relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]"
     : "relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
