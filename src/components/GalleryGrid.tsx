@@ -27,8 +27,8 @@ function imageFrameClass(image: GalleryImage, mode: "grid" | "lightbox") {
 
   if (image.aspect === "narrowPortrait") {
     return mode === "lightbox"
-      ? "relative mx-auto w-full max-w-xs aspect-[465/945] rounded-lg overflow-hidden bg-transparent"
-      : "relative aspect-[465/945] w-full overflow-hidden rounded-lg bg-transparent cursor-pointer";
+      ? "relative mx-auto w-full max-w-xs aspect-[465/945] rounded-lg overflow-hidden bg-[lightgray]"
+      : "relative aspect-[465/945] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
   }
 
   return mode === "lightbox"
