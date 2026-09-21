@@ -9,7 +9,7 @@ export interface GalleryImage {
 
 /**
  * Drop project photos into `public/images/` with these exact names:
- *   prosjekt-pipekasse-sort-sorvest.jpg
+ *   prosjekt-pipekasse-sort-sidetekking.jpg
  *   prosjekt-sort-pipebeslag-tegl.jpg
  *   prosjekt-takrenner.jpg
  *   prosjekt-pipebeslag.jpg
@@ -21,7 +21,7 @@ export interface GalleryImage {
  */
 export const galleryImages: GalleryImage[] = [
   {
-    src: "/images/prosjekt-pipekasse-sort-sorvest.jpg",
+    src: "/images/prosjekt-pipekasse-sort-sidetekking.jpg",
     alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
     caption: "Sort pipekasse",
   },
