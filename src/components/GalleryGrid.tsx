@@ -27,13 +27,17 @@ function imageFrameClass(image: GalleryImage, mode: "grid" | "lightbox") {
 
   if (image.aspect === "narrowPortrait") {
     return mode === "lightbox"
-      ? "relative mx-auto w-full max-w-xs aspect-[465/945] rounded-lg overflow-hidden bg-[lightgray]"
-      : "relative aspect-[465/945] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
+      ? "relative mx-auto w-full max-w-xs aspect-[465/945] rounded-lg overflow-hidden bg-transparent"
+      : "relative aspect-[465/945] w-full overflow-hidden rounded-lg bg-transparent cursor-pointer";
   }
 
   return mode === "lightbox"
     ? "relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]"
     : "relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer";
+}
+
+function imageObjectClass(image: GalleryImage) {
+  return image.fit === "cover" ? "object-cover" : "object-contain";
 }
 
 function LightboxCarousel({
@@ -135,7 +139,7 @@ function LightboxCarousel({
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-contain"
+                    className={imageObjectClass(image)}
                     sizes="100vw"
                     priority={Math.abs(index - startIndex) <= 1}
                     style={imageStyle(image)}
@@ -212,7 +216,7 @@ export default function GalleryGrid() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-contain"
+                  className={imageObjectClass(image)}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   style={imageStyle(image)}
                 />
