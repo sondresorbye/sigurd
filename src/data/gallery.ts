@@ -12,7 +12,6 @@ export interface GalleryImage {
 /**
  * Drop project photos into `public/images/` with these exact names:
  *   prosjekt-zink-pipe.jpg
- *   prosjekt-pipekasse-sort-skorstein.jpg
  *   prosjekt-sort-pipebeslag-tegl.jpg
  *   prosjekt-takrenner.jpg
  *   prosjekt-pipebeslag.jpg
@@ -28,12 +27,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Zink pipekasse på rødt tegltak",
     caption: "Zink pipe",
     aspect: "portrait",
-  },
-  {
-    src: "/images/prosjekt-pipekasse-sort-skorstein-portrett.jpg",
-    alt: "Svart pipebeslag med falser og topphatt montert på eldre takstein",
-    caption: "Sort pipekasse",
-    frame: "gray",
   },
   {
     src: "/images/prosjekt-sort-pipebeslag-tegl.jpg",
