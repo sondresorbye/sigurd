@@ -55,7 +55,8 @@ const services: Service[] = [
     title: "Luftehatter / Pipebeslag",
     description:
       "Montering og utskifting av luftehatter og pipebeslag for god tetting.",
-    image: "/images/prosjekt-pipebeslag.jpg",
+    image: "/images/prosjekt-zink-pipe.jpg",
+    objectPosition: "center 38%",
   },
   {
     title: "Snøfangere",
