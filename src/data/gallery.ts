@@ -32,12 +32,12 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-zink-pipebeslag-tegl.jpg",
     alt: "Zinkbeslag rundt pipe på rødt tegltak",
-    caption: "Zinkbeslag på pipe",
+    caption: "Zink tekking",
   },
   {
     src: "/images/prosjekt-zink-pipe-to-loep.jpg",
     alt: "Zinkbeslag på pipe med to løp på mørkt tegltak",
-    caption: "Zinkbeslag med to løp",
+    caption: "Zink tekking",
   },
   {
     src: "/images/prosjekt-takrenner.jpg",
