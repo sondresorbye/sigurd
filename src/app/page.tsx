@@ -38,7 +38,7 @@ const services: Service[] = [
     title: "Ventilasjon montering",
     description:
       "Enkel ventilasjon montering og prosjektering for boliger og næring.",
-    image: "/images/1000029381.jpg",
+    image: "https://images.unsplash.com/photo-1684073891328-a97d7eb6eadd?w=600&h=400&fit=crop",
   },
   {
     title: "Ventilasjonsisolering",
