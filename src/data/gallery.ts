@@ -12,6 +12,7 @@ export interface GalleryImage {
 /**
  * Drop project photos into `public/images/` with these exact names:
  *   prosjekt-zink-pipe.jpg
+ *   prosjekt-zink-pipebeslag-tegl.jpg
  *   prosjekt-takrenner.jpg
  *   prosjekt-pipebeslag.jpg
  *   prosjekt-svart-hus.jpg
@@ -26,6 +27,11 @@ export const galleryImages: GalleryImage[] = [
     alt: "Zink pipekasse på rødt tegltak",
     caption: "Zink pipe",
     aspect: "portrait",
+  },
+  {
+    src: "/images/prosjekt-zink-pipebeslag-tegl.jpg",
+    alt: "Zinkbeslag rundt pipe på rødt tegltak",
+    caption: "Zinkbeslag på pipe",
   },
   {
     src: "/images/prosjekt-takrenner.jpg",
