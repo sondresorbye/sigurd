@@ -5,7 +5,6 @@ export interface GalleryImage {
   objectPosition?: string;
   zoom?: number;
   zoomOrigin?: string;
-  aspect?: "video" | "portrait";
   frame?: "gray";
 }
 
@@ -27,7 +26,6 @@ export const galleryImages: GalleryImage[] = [
     src: "/images/prosjekt-zink-pipe.jpg",
     alt: "Zink pipekasse på rødt tegltak",
     caption: "Zink pipe",
-    aspect: "portrait",
   },
   {
     src: "/images/prosjekt-zink-pipebeslag-tegl.jpg",

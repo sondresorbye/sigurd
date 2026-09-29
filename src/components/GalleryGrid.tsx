@@ -21,12 +21,6 @@ function imageStyle(image: GalleryImage) {
 function imageFrameClass(image: GalleryImage, mode: "grid" | "lightbox") {
   const framed = image.frame === "gray" ? " p-2" : "";
 
-  if (image.aspect === "portrait") {
-    return mode === "lightbox"
-      ? `relative mx-auto w-full max-w-sm aspect-[574/999] rounded-lg overflow-hidden bg-[lightgray]${framed}`
-      : `relative aspect-[574/999] w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer${framed}`;
-  }
-
   return mode === "lightbox"
     ? `relative w-full aspect-video rounded-lg overflow-hidden bg-[lightgray]${framed}`
     : `relative aspect-video w-full overflow-hidden rounded-lg bg-[lightgray] cursor-pointer${framed}`;
