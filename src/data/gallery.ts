@@ -60,7 +60,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-takmoene.jpg",
     alt: "Takmøne med to svarte pipebeslag",
-    caption: "Takmøne og piper",
+    caption: "Valmet tak",
   },
   {
     src: "/images/prosjekt-luftehatt.jpg",
