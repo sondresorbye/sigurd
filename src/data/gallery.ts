@@ -56,7 +56,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-svart-hus.jpg",
     alt: "Moderne hus med svart takstein og svarte pipebeslag",
-    caption: "Svart tak og pipebeslag",
+    caption: "Komplett tak renovasjon",
   },
   {
     src: "/images/prosjekt-pipe-detalj.jpg",
