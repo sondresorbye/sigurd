@@ -27,7 +27,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/prosjekt-bandtekking-snofangere.jpg",
     alt: "Mørkt båndtekket tak med snøfangere og pipebeslag",
-    caption: "Båndtekking med snøfangere",
+    caption: "Klikkfals-system fra Polen",
   },
   {
     src: "/images/prosjekt-zink-pipebeslag-lys.jpg",
