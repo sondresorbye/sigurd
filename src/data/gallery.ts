@@ -10,6 +10,7 @@ export interface GalleryImage {
 
 /**
  * Drop project photos into `public/images/` with these exact names:
+ *   prosjekt-bandtekking-snofangere.jpg
  *   prosjekt-zink-pipe.jpg
  *   prosjekt-zink-pipebeslag-lys.jpg
  *   prosjekt-zink-pipebeslag-tegl.jpg
@@ -23,6 +24,11 @@ export interface GalleryImage {
  * They show first in the gallery.
  */
 export const galleryImages: GalleryImage[] = [
+  {
+    src: "/images/prosjekt-bandtekking-snofangere.jpg",
+    alt: "Mørkt båndtekket tak med snøfangere og pipebeslag",
+    caption: "Båndtekking med snøfangere",
+  },
   {
     src: "/images/prosjekt-zink-pipebeslag-lys.jpg",
     alt: "Zinkbeslag på pipe med utsikt over boligområde",
