@@ -47,7 +47,7 @@ body {
 
 .december-lights {
   position: fixed;
-  top: 4rem;
+  top: 6.5rem;
   left: 0;
   right: 0;
   z-index: 40;
@@ -112,6 +112,10 @@ body {
 }
 
 @media (min-width: 640px) {
+  .december-lights { top: 7.5rem; }
+}
+
+@media (min-width: 768px) {
   .december-lights { top: 5rem; }
 }
 
