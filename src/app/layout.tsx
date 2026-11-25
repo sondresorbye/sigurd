@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DecemberDecorations from "@/components/DecemberDecorations";
 
 export const metadata: Metadata = {
   title: "Berman Blikk | Blikkenslager og taktekker i Oslo",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="nb" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         <Header />
+        <DecemberDecorations />
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
