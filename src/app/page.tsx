@@ -26,7 +26,8 @@ const services: Service[] = [
     title: "Takplater / Båndtekking",
     description:
       "Montering av takplater og båndtekking for nye og eksisterende tak.",
-    image: "/images/prosjekt-pipebeslag.jpg",
+    image: "/images/prosjekt-bandtekking-snofangere.jpg",
+    objectPosition: "center 25%",
   },
   {
     title: "Beslagsarbeider og produksjon",
