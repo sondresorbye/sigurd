@@ -17,18 +17,17 @@ const snowflakes = [
   { left: 97, duration: 19, delay: -6, size: 12 },
 ];
 
-function isDecemberInNorway() {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "numeric",
-    timeZone: "Europe/Oslo",
-  }).format(new Date()) === "12";
+function isChristmasSeason() {
+  const now = Date.now();
+  // Midnight in Norway on 25 November and 1 January (CET, UTC+1).
+  return now >= Date.parse("2026-11-24T23:00:00Z") && now < Date.parse("2026-12-31T23:00:00Z");
 }
 
 export default function DecemberDecorations() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const update = () => setShow(isDecemberInNorway());
+    const update = () => setShow(isChristmasSeason());
     update();
     const interval = window.setInterval(update, 30_000);
     return () => window.clearInterval(interval);
