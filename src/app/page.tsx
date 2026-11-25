@@ -12,6 +12,8 @@ interface Service {
   description: string;
   image: string;
   objectPosition?: string;
+  zoom?: number;
+  zoomOrigin?: string;
   images?: ServiceImage[];
 }
 
@@ -27,7 +29,9 @@ const services: Service[] = [
     description:
       "Montering av takplater og båndtekking for nye og eksisterende tak.",
     image: "/images/prosjekt-bandtekking-snofangere.jpg",
-    objectPosition: "center 25%",
+    objectPosition: "right 72%",
+    zoom: 1.2,
+    zoomOrigin: "right center",
   },
   {
     title: "Beslagsarbeider og produksjon",
@@ -108,8 +112,12 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-brand-blue text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
-          <div className="max-w-3xl">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 sm:pt-10 sm:pb-28 lg:pb-36">
+          <div className="inline-flex items-center gap-3 rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium shadow-sm">
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" aria-hidden="true" />
+            Daglig leder aktiv
+          </div>
+          <div className="max-w-3xl mt-10 sm:mt-16 lg:mt-24">
             <h1 className="animate-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
               Sterk på{" "}
               <span className="text-brand-red">tak</span>
@@ -262,7 +270,15 @@ export default function Home() {
                         alt={service.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
-                        style={service.objectPosition ? { objectPosition: service.objectPosition } : undefined}
+                        style={
+                          service.objectPosition || service.zoom
+                            ? {
+                                objectPosition: service.objectPosition,
+                                scale: service.zoom,
+                                transformOrigin: service.zoomOrigin,
+                              }
+                            : undefined
+                        }
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
