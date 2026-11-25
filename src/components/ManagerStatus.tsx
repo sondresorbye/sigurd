@@ -40,7 +40,7 @@ export default function ManagerStatus() {
       aria-live="polite"
     >
       <span
-        className={`h-2.5 w-2.5 rounded-full ${active ? "bg-emerald-300" : "bg-white/50"}`}
+        className={`h-2.5 w-2.5 rounded-full ${active === null ? "bg-white/50" : active ? "bg-emerald-300" : "bg-red-400"}`}
         aria-hidden="true"
       />
       Daglig leder {active === null ? "" : active ? "aktiv" : "inaktiv"}
