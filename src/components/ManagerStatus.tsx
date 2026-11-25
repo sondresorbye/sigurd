@@ -2,15 +2,23 @@
 
 import { useEffect, useState } from "react";
 
-const osloHour = new Intl.DateTimeFormat("en-GB", {
+const osloTime = new Intl.DateTimeFormat("en-GB", {
+  weekday: "short",
   hour: "2-digit",
   hourCycle: "h23",
   timeZone: "Europe/Oslo",
 });
 
 function isActiveNow() {
-  const hour = Number(osloHour.format(new Date()));
-  return hour >= 8 && hour < 18;
+  const parts = osloTime.formatToParts(new Date());
+  const hour = Number(parts.find((part) => part.type === "hour")?.value);
+  const weekday = parts.find((part) => part.type === "weekday")?.value;
+
+  return (
+    (hour >= 8 && hour < 18) ||
+    (hour >= 23 && (weekday === "Fri" || weekday === "Sat")) ||
+    (hour < 4 && (weekday === "Sat" || weekday === "Sun"))
+  );
 }
 
 export default function ManagerStatus() {
