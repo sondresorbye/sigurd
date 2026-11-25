@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
+import ManagerStatus from "@/components/ManagerStatus";
 
 interface ServiceImage {
   src: string;
@@ -113,10 +114,7 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-brand-blue text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 sm:pt-10 sm:pb-28 lg:pb-36">
-          <div className="inline-flex items-center gap-3 rounded-lg border border-white/25 bg-white/10 px-4 py-3 text-sm font-medium shadow-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" aria-hidden="true" />
-            Daglig leder aktiv
-          </div>
+          <ManagerStatus />
           <div className="max-w-3xl mt-10 sm:mt-16 lg:mt-24">
             <h1 className="animate-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
               Sterk på{" "}
